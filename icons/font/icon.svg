@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2013 by original authors @ fontello.com</metadata>
+<defs>
+<font id="icon" horiz-adv-x="1000" >
+<font-face font-family="icon" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="search" unicode="&#xe800;" d="m772 78q30-34 6-62l-46-46q-36-32-68 0l-190 190q-74-42-156-42q-128 0-223 95t-95 223t90 219t218 91t224-95t96-223q0-88-46-162z m-678 358q0-88 68-156t156-68t151 63t63 153q0 88-68 155t-156 67t-151-63t-63-151z" horiz-adv-x="789" />
+<glyph glyph-name="quote" unicode="&#xe801;" d="m146 680q146 0 184-146q38-140-40-302q-80-168-224-204q-32-8-66-8l0 70q112 0 182 108q54 86 26 146q-16 36-62 36q-60 0-103 44t-43 106t43 106t103 44z m420 0q146 0 184-146q38-140-40-302q-80-168-224-204q-32-8-66-8l0 70q112 0 182 108q54 86 26 146q-16 36-62 36q-60 0-103 44t-43 106t43 106t103 44z" horiz-adv-x="762" />
+<glyph glyph-name="twitter-circled" unicode="&#xe803;" d="m480 830q200 0 340-140t140-340q0-198-140-339t-340-141q-198 0-339 141t-141 339q0 200 141 340t339 140z m196-392q30 22 46 48q-32-12-54-14q30 18 42 52q-30-16-60-22q-28 28-70 28q-40 0-67-28t-27-66q0-2 1-10t1-12q-120 6-194 100q-14-24-14-48q0-50 44-78q-26 0-44 12l0-2q0-34 21-60t55-32q-16-4-24-4q-12 0-18 2q20-66 88-66q-50-40-118-40l-22 0q68-42 144-42q122 0 196 83t74 187l0 12z" horiz-adv-x="960" />
+<glyph glyph-name="facebook-circled" unicode="&#xe802;" d="m480 830q200 0 340-140t140-340q0-198-140-339t-340-141t-340 141t-140 339q0 200 140 340t340 140z m114-330l0 78l-72 0q-44 0-74-33t-30-81l0-44l-76 0l0-74l76 0l0-222l86 0l0 222l90 0l0 74l-90 0l0 52q0 28 18 28l72 0z" horiz-adv-x="960" />
+<glyph glyph-name="linkedin-circled" unicode="&#xe804;" d="m480 830q200 0 340-140t140-340q0-198-140-339t-340-141q-198 0-339 141t-141 339q0 200 141 340t339 140z m-118-678l0 312l-96 0l0-312l96 0z m-48 352q52 0 52 48t-52 48q-22 0-37-14t-15-34q0-48 52-48z m404-352l0 184q0 66-31 101t-81 35q-66 0-96-50l-2 0l-6 42l-84 0q2-28 2-100l0-212l98 0l0 180q0 18 4 24q12 38 50 38q48 0 48-68l0-174l98 0z" horiz-adv-x="960" />
+</font>
+</defs>
+</svg>

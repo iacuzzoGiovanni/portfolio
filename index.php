@@ -1,9 +1,5 @@
 <?php get_header(); ?>
 
-<section id="realisations">
-	<div class="container">
-		<h1>Réalisations</h1>
-	</div>
-</section>
+<?php get_template_part( 'content', 'realisations' ); ?>
 
 <?php get_footer(); ?>
