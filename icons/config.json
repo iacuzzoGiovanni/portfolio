@@ -35,6 +35,12 @@
       "css": "linkedin-circled",
       "code": 59396,
       "src": "entypo"
+    },
+    {
+      "uid": "8da3ac534210aae9c0f0e13804c1df97",
+      "css": "cancel",
+      "code": 59397,
+      "src": "websymbols"
     }
   ]
 }

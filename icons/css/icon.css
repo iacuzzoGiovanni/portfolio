@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon';
-  src: url('../font/icon.eot?82732356');
-  src: url('../font/icon.eot?82732356#iefix') format('embedded-opentype'),
-       url('../font/icon.woff?82732356') format('woff'),
-       url('../font/icon.ttf?82732356') format('truetype'),
-       url('../font/icon.svg?82732356#icon') format('svg');
+  src: url('../font/icon.eot?47453394');
+  src: url('../font/icon.eot?47453394#iefix') format('embedded-opentype'),
+       url('../font/icon.woff?47453394') format('woff'),
+       url('../font/icon.ttf?47453394') format('truetype'),
+       url('../font/icon.svg?47453394#icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'icon';
-    src: url('../font/icon.svg?82732356#icon') format('svg');
+    src: url('../font/icon.svg?47453394#icon') format('svg');
   }
 }
 */
@@ -41,6 +41,7 @@
  
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
+  /*margin-left: .2em;*/
  
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -57,7 +58,11 @@
   color: #fff;
   margin-top: 60px;
 } /* '' */
+
 .icon-quote:before { content: '\e801'; } /* '' */
 .icon-twitter-circled:before { content: '\e803'; } /* '' */
 .icon-facebook-circled:before { content: '\e802'; } /* '' */
 .icon-linkedin-circled:before { content: '\e804'; } /* '' */
+
+.icon-cancel:before { content: '\e805';} /* '' */
+

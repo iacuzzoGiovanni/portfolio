@@ -24,8 +24,9 @@
 							
 							<article <?php if($center): ?>class="center"<?php endif; ?>>
 								<?php $image = wp_get_attachment_image_src(get_field('image'), 'thumbnail'); ?>
-								<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('image')) ?>">
-								
+								<div class="imageRea">
+									<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('image')) ?>">
+								</div>
 								<div class="infos icon-search">
 									<h1><?php the_title(); ?></h1>
 									<span><?php echo get_field('technologies') ?></span>
@@ -41,7 +42,8 @@
 					<?php endif; ?>
 			
 			<?php endwhile; ?>
-		
+			
 		<?php endif; ?>
+
 	<div class="clear"></div>
 </section>
