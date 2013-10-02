@@ -9,14 +9,17 @@
 		$(this).parent().after(infosHTML);
 		$("#infosWrapper").slideDown();
 
+		var post_id = parseInt($(this).attr("data-id"));
+		
 		$.ajax({
+			cache: false,
+            timeout: 8000,
             url: php_array.admin_ajax,
-            type: "GET",
-            data: ({ action:'get_post_infos'}),
-            success: function( data, textStatus, jqXHR ){
+            type: "POST",
+            data: ({ action:'get_post_infos', id:post_id}),
+            success: function(data){
 
-                var ajax_response = data;
-                console.log( ajax_response );                                                        
+                console.log(JSON.parse(data));                                                       
 
             }
         });

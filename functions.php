@@ -29,7 +29,15 @@ add_action( 'wp_enqueue_scripts', 'portfolio_script_styles' );
 
 
 function get_post_infos() {
-	die("coucou");
+	
+	$post_id = $_POST['id'];
+	$post = get_post($post_id);
+	$image = wp_get_attachment_image_src(get_field('image', $post_id), 'medium');
+	$technologies = wp_get_post_terms( $post_id , 'technologies');
+	$data = array('image' => $image[0], 'title' => $post->post_title, 'technologies' => $technologies,'description' => get_field('description', $post_id), 'lien' => get_field('lien', $post_id));
+	
+	//Send datas
+	die(json_encode($data));
 }
 add_action( 'wp_ajax_get_post_infos', 'get_post_infos' );
 add_action( 'wp_ajax_nopriv_get_post_infos', 'get_post_infos' );

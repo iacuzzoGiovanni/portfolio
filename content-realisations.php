@@ -22,7 +22,7 @@
 							
 							<?php if($i === 1){$center = 1;}else{$center = 0;} ?>
 							
-							<article <?php if($center): ?>class="center"<?php endif; ?>>
+							<article <?php if($center): ?>class="center"<?php endif; ?> data-id="<?php the_ID(); ?>">
 								<?php $image = wp_get_attachment_image_src(get_field('image'), 'thumbnail'); ?>
 								<div class="imageRea">
 									<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('image')) ?>">
