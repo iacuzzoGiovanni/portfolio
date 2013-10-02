@@ -8,6 +8,18 @@
 		$(this).addClass("infosOn");
 		$(this).parent().after(infosHTML);
 		$("#infosWrapper").slideDown();
+
+		$.ajax({
+            url: php_array.admin_ajax,
+            type: "GET",
+            data: ({ action:'get_post_infos'}),
+            success: function( data, textStatus, jqXHR ){
+
+                var ajax_response = data;
+                console.log( ajax_response );                                                        
+
+            }
+        });
 	};
 
 	var cancelInfos = function(e){

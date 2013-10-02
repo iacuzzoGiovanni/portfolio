@@ -15,7 +15,8 @@
         <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/normalize.css">
         <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/icons/css/icon.css">
         <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
-        <script src="<?php bloginfo( 'template_directory' ); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
+        <!--<script src="<?php bloginfo( 'template_directory' ); ?>/js/vendor/modernizr-2.6.2.min.js"></script>-->
+        <?php wp_head(); ?>
     </head>
     <body>
         <!--[if lt IE 7]>
