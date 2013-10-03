@@ -1,28 +1,40 @@
 ( function ( $ ) {
 	
 	//Global vars
-	var infosHTML = '<div id="infosWrapper"><a href="#" class="icon-cancel"></a><div class="container"><img src="" width="460" height="400"><div id="moreInfos"><h1>Smartplan</h1><div id="littleTechnologies"><span>php</span><span>wordpress</span><span>design</span></div><p>Tout le monde fait du travail. Pourtant il n\'est pas le même partout. Tout simplement car certains sont de bons éléments et d\'autres pas. la vie est faites ainsi</p> <a href="#">Voir le site</a></div></div></div>';
+	var infosHTML = '<div id="infosWrapper"><a href="#" class="icon-cancel"></a><div class="container"><img src="" width="460" height="400"><div id="moreInfos"><h1></h1><div id="littleTechnologies"></div><p></p><a href="#">Voir le site</a></div></div></div>';
 	
 	//Method
 	var displayInfos = function(e){
-		$(this).addClass("infosOn");
-		$(this).parent().after(infosHTML);
-		$("#infosWrapper").slideDown();
-
-		var post_id = parseInt($(this).attr("data-id"));
+		
+		var post_id = parseInt($(this).attr("data-id")),
+			article = $(this),
+			information;
 		
 		$.ajax({
-			cache: false,
-            timeout: 8000,
             url: php_array.admin_ajax,
             type: "POST",
             data: ({ action:'get_post_infos', id:post_id}),
             success: function(data){
+            	
+            	//Recuperations des données
+            	information = JSON.parse(data);
+            	article.parent().after(infosHTML);
 
-                console.log(JSON.parse(data));                                                       
+            	//Ajout des infos dans l'html
+            	$("#infosWrapper img").attr("src", information.image);
+            	$("#infosWrapper h1").text(information.title);
+            	for(var i = 0; i<information.technologies.length; i++){
+            		$("#infosWrapper #littleTechnologies").append("<span>" + information.technologies[i].name + "</span>");
+            	}
+				$("#infosWrapper p").text(information.description);
+            	$("#infosWrapper #moreInfos a").attr("href", information.lien);
 
+            	//affichage et effet à l'écran
+            	article.addClass("infosOn");                                                     
+                $("#infosWrapper").slideDown();
             }
         });
+
 	};
 
 	var cancelInfos = function(e){
@@ -35,8 +47,8 @@
 
 	//Onload routine
 	$(function(){
-		$("#realisations article").on("click", displayInfos);
-		$("body").delegate(".icon-cancel", "click", cancelInfos);
+		$("body").on("click", "#realisations article",displayInfos);
+		$("body").on("click", ".icon-cancel", cancelInfos);
 	});
 
 }( jQuery ) );
