@@ -1,44 +1,81 @@
 ( function ( $ ) {
 	
 	//Global vars
-	var infosHTML = '<div id="infosWrapper"><a href="#" class="icon-cancel"></a><div class="container"><img src="" width="460" height="400"><div id="moreInfos"><h1></h1><div id="littleTechnologies"></div><p></p><a href="#">Voir le site</a></div></div></div>';
+	var infosHTML = '<div id="infosWrapper"><a href="#" class="icon-cancel"></a><div class="container"><img src="" width="460" height="400"><div id="moreInfos"><h1></h1><div id="littleTechnologies"></div><p></p><a href="#">Voir le site</a></div></div></div>',
+		boolInfos = false;
 	
 	//Method
 	var displayInfos = function(e){
+		e.preventDefault();	
 		
 		var post_id = parseInt($(this).attr("data-id")),
 			article = $(this),
-			information;
+			information,
+			oldRow = $("#infosWrapper").attr("class");
 		
+		console.log(oldRow);
 		$.ajax({
             url: php_array.admin_ajax,
             type: "POST",
             data: ({ action:'get_post_infos', id:post_id}),
             success: function(data){
-            	
+
             	//Recuperations des données
             	information = JSON.parse(data);
-            	article.parent().after(infosHTML);
+            	if(boolInfos){
+            		console.log("article déja affiché");
+            		if(oldRow != article.parent().attr("data-row")){
+            			$("#infosWrapper").slideUp("middle", function(){
+							$("#infosWrapper").remove();
+							article.parent().after(infosHTML);
+							addInfos(information);
+							$("#infosWrapper").slideDown();
+							$("#infosWrapper").removeClass();
+            				$("#infosWrapper").addClass(article.parent().attr("data-row"));
+						});
+						console.log("article déja affiché et article d'une autre row");
+            		}else{
+            			$("#infosWrapper").remove();
+	            		article.parent().after(infosHTML);
+	            		addInfos(information);
+	            		$("#infosWrapper").css("display","block");
+	            		console.log("article déja affiché et article de la meme ligne");
+            		}
 
-            	//Ajout des infos dans l'html
-            	$("#infosWrapper img").attr("src", information.image);
-            	$("#infosWrapper h1").text(information.title);
-            	for(var i = 0; i<information.technologies.length; i++){
-            		$("#infosWrapper #littleTechnologies").append("<span>" + information.technologies[i].name + "</span>");
+            	}else{
+            		article.parent().after(infosHTML);
+            		addInfos(information);
+            		console.log("article non affiché");
             	}
-				$("#infosWrapper p").text(information.description);
-            	$("#infosWrapper #moreInfos a").attr("href", information.lien);
 
             	//affichage et effet à l'écran
-            	article.addClass("infosOn");                                                     
-                $("#infosWrapper").slideDown();
+            	if(boolInfos){
+            		$("article").removeClass("infosOn");
+            	}else{	            		                                                     
+                	$("#infosWrapper").slideDown();
+            	}
+            	article.addClass("infosOn");
+            	$("#infosWrapper").removeClass();
+            	$("#infosWrapper").addClass(article.parent().attr("data-row"));
+                boolInfos = true;
             }
         });
+	};
 
+	var addInfos = function(information){
+		$("#infosWrapper img").attr("src", information.image);
+    	$("#infosWrapper h1").text(information.title);
+    	$("#infosWrapper #littleTechnologies span").remove();
+    	for(var i = 0; i<information.technologies.length; i++){
+    		$("#infosWrapper #littleTechnologies").append("<span>" + information.technologies[i].name + "</span>");
+    	}
+		$("#infosWrapper p").text(information.description);
+    	$("#infosWrapper #moreInfos a").attr("href", information.lien);
 	};
 
 	var cancelInfos = function(e){
 		e.preventDefault();
+		boolInfos = false;
 		$("article").removeClass("infosOn");
 		$("#infosWrapper").slideUp("middle", function(){
 			$("#infosWrapper").remove();

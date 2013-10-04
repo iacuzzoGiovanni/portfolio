@@ -125,6 +125,7 @@ strong{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	position: relative;
+    -webkit-backface-visibility: hidden;
 }
 
 header{
@@ -219,7 +220,7 @@ header h1{
 	padding-top: 100px;
 }
 
-#realisations h1{
+#realisations h1, #apropos h1, #competences h1{
 	margin: 0;
 	text-align: center;
 	font-size: 12px;
@@ -228,6 +229,10 @@ header h1{
 	color: #fff;
 	text-rendering: auto;
     margin-bottom: 25px;
+}
+
+#apropos h1{
+    color: #152126;
 }
 
 article{
@@ -307,6 +312,7 @@ article:hover .infos{
 }
 
 #infosWrapper{
+    -webkit-backface-visibility: hidden;
     display: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -355,6 +361,11 @@ article:hover .infos{
     margin-right: 4px;
 }
 
+#moreInfos{
+    float: left;
+    width: 48.936170212766%;
+}
+
 #moreInfos p{
     font-size: 16px;
     font-weight: 400;
@@ -382,6 +393,56 @@ article:hover .infos{
     right: 20px;
     text-decoration: none;
     color: #e74c3c;
+}
+
+#apropos{
+    background-color: #eee;
+    padding: 100px 0;
+}
+
+#apropos img{
+    display: block;
+    margin: 0 auto;
+}
+
+#apropos p{
+    font-size: 22px;
+    font-weight: 300;
+    width: 82.978723404255%;
+    text-align: center;
+    color: #152126;
+    margin: 0 auto;
+    position: relative;
+}
+
+#apropos p:before{
+    content: "";
+    width: 24px;
+    height: 20px;
+    background-image: url("img/quotes.png");
+    position: absolute;
+    left: -40px;
+    top: -10px;
+}
+
+#apropos p:after{
+    content: "";
+    width: 24px;
+    height: 20px;
+    background-image: url("img/quotes.png");
+    background-position: right;
+    position: absolute;
+    right: -40px;
+    bottom: -15px;
+}
+
+#competences{
+    background-color: #152126;
+    padding-top: 50px;
+}
+
+#competences h1{
+    color: #eee;
 }
 /* ==========================================================================
    Helper classes

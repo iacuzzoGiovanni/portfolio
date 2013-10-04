@@ -6,6 +6,23 @@ function register_my_menu(){
 }
 add_action( 'init', 'register_my_menu' );
 
+function create_post_type(){
+	register_post_type('competences',
+		array('labels' => array(
+				'name' => __('compétences'),
+				'singular_name' => __('compétence')
+				),
+			'supports' => array('title',
+			                    'custom-fields', 
+			                    'thumbnail', 
+			                    'post-formats'),
+			'public' => true,
+			'has_archive' => true
+		)
+	);
+}
+add_action('init', 'create_post_type');
+
 function portfolio_script_styles(){
 	
 	//Add Jquery
