@@ -221,7 +221,7 @@ header h1{
     padding-bottom: 50px;
 }
 
-#realisations h1, #apropos h1, #competences h1{
+#realisations h1, #apropos h1, #competences h1, #contact h1{
 	margin: 0;
 	text-align: center;
 	font-size: 12px;
@@ -232,7 +232,7 @@ header h1{
     margin-bottom: 25px;
 }
 
-#apropos h1{
+#apropos h1, #contact h1{
     color: #152126;
     margin-top: .5em;
     margin-bottom: 1em;
@@ -580,7 +580,128 @@ article:hover .infos{
     width: 50%;
 }
 
+/* formulaire */
+#contact{
+    background-color: #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
+#contactInfos, #contactForm{
+    float: left;
+}
+
+#contactInfos{
+    width: 31.914893617021%; 
+    margin-right: 20px;
+}
+
+#contactForm{
+    width: 65.957446808511%;
+}
+
+textarea{
+    border: none;
+    width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    resize: none;
+    height: 270px;
+    margin-bottom: 20px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #d5d5d5;
+    color: #152126;
+}
+
+input{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    width: 48.387096774194%;
+    height: 44px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    background-color: #d5d5d5;
+    color: #152126;
+}
+
+#email, #sujet{
+    margin-left: 20px;
+}
+
+#contactInfos h2{
+    margin-top: 0;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 10px !important;
+    color: #152126;
+    position: relative;
+    bottom: 15px; 
+}
+
+#contactInfos span{
+    font-weight: 300;
+}
+
+#contactInfos span a{
+    font-weight: 500;
+}
+
+#contactInfos a{
+    color: #e74c3c;
+}
+
+#contactInfos p{
+    margin: 0;
+    font-weight: 300;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 13px;
+}
+
+.social a span{
+    display: none;
+}
+
+.social a{
+    text-decoration: none;
+    font-size: 45px;
+}
+
+#contactForm button{
+    background-color: #e74c3c;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 4px solid #bf3f31;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+fieldset div{
+    text-align: right;
+}
+
+#copyright{
+    background-color: #152126;
+    clear: both;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255, .5);
+    padding: 15px 0;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
