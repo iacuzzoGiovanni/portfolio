@@ -23,7 +23,6 @@
             	//Recuperations des données
             	information = JSON.parse(data);
             	if(boolInfos){
-            		console.log("article déja affiché");
             		if(oldRow != article.parent().attr("data-row")){
             			$("#infosWrapper").slideUp("middle", function(){
 							$("#infosWrapper").remove();
@@ -33,19 +32,16 @@
 							$("#infosWrapper").removeClass();
             				$("#infosWrapper").addClass(article.parent().attr("data-row"));
 						});
-						console.log("article déja affiché et article d'une autre row");
             		}else{
             			$("#infosWrapper").remove();
 	            		article.parent().after(infosHTML);
 	            		addInfos(information);
 	            		$("#infosWrapper").css("display","block");
-	            		console.log("article déja affiché et article de la meme ligne");
             		}
 
             	}else{
             		article.parent().after(infosHTML);
             		addInfos(information);
-            		console.log("article non affiché");
             	}
 
             	//affichage et effet à l'écran
@@ -82,10 +78,63 @@
 		});
 	};
 
+	var sendForm = function(e){
+		e.preventDefault();
+
+		var $contactForm = $(this),
+			isNameOk = checkIsNotEmpty('nom'),
+			isEmailOk = checkIsNotEmpty('email') && checkIsMailOk('email'),
+			isSujetOk = checkIsNotEmpty('sujet'),
+			isTelOk = checkIsNotEmpty('tel') && checkIsNumberOk('tel'),
+			isMessageOk = checkIsNotEmpty('message');
+
+		if( isNameOk && isEmailOk && isMessageOk && isSujetOk && isTelOk ){
+
+			$.ajax({
+				url: $contactForm.attr('action'),
+				type:"post",
+				data: $contactForm.serialize(),
+				success:function(data){
+					console.log("votre email à bien été envoyé");
+				}
+			});
+		}
+	};
+
+	var checkIsNotEmpty = function(input){
+		if(!$.trim($("#"+input).val())){
+			$("#"+input).addClass("error");
+			return false;
+		}else{
+			return true;
+		}
+	};
+
+	var checkIsMailOk = function(input){
+		var reg = new RegExp('[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}', 'i');
+		
+		if(!reg.test($("#"+input).val())){
+			$("#"+input).addClass("error");
+			return false;
+		}else{
+			return true;
+		}
+	};
+
+	var checkIsNumberOk = function(input){
+		if(!$.isNumeric($("#"+input).val())){
+			$("#"+input).addClass("error");
+			return false;
+		}else{
+			return true;
+		}
+	};
+
 	//Onload routine
 	$(function(){
 		$("body").on("click", "#realisations article",displayInfos);
 		$("body").on("click", ".icon-cancel", cancelInfos);
+		$("#contactForm").on("submit", "form", sendForm);
 	});
 
 }( jQuery ) );

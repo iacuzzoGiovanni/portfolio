@@ -17,10 +17,10 @@
 			</div>
 		</div>
 		<div id="contactForm">
-			<form action="#" method="post">
+			<form action="<?php bloginfo('template_directory'); ?>/contact-mail.php" method="post">
 				<fieldset>
 					<input type="text" placeholder="Nom" name="nom" id="nom"/><input type="email" placeholder="Email" name="email" id="email"/><input type="tel" placeholder="Tél" name="tel" id="tel"/><input type="text" placeholder="Sujet" name="sujet" id="sujet"/>
-					<textarea placeholder="Message"></textarea>
+					<textarea placeholder="Message" name="message" id="message"></textarea>
 					<div>
 						<button type="submit">envoyer</button>
 					</div>
