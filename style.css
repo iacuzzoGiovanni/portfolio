@@ -625,15 +625,14 @@ input{
     -moz-border-radius: 3px;
     border-radius: 3px;
     border: none;
-    width: 48.387096774194%;
+    width: 100%;
     height: 44px;
-    margin-bottom: 20px;
     padding-left: 10px;
     background-color: #d5d5d5;
     color: #152126;
 }
 
-#email, #sujet{
+.email, .sujet{
     margin-left: 20px;
 }
 
@@ -676,6 +675,10 @@ input{
     font-size: 45px;
 }
 
+#contactForm{
+    position: relative;
+}
+
 #contactForm button{
     background-color: #e74c3c;
     -webkit-border-radius: 3px;
@@ -703,9 +706,49 @@ fieldset div{
     padding: 15px 0;
 }
 
+.inputContainer{
+    float: left;
+    width: 48.387096774194%;
+    height: 44px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.textareaContainer{
+    clear: both;
+    position: relative;
+}
+
 /** ERREUR FORMULAIRE **/
 .error{
     border: 2px solid #e74c3c;
+}
+
+.errorText{
+    color: #e74c3c;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: none;
+}
+
+.formIsSend{
+    display: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #27ae60;
+    width: 100%;
+    height: 398px;
+    font-size: 30px;
+    line-height: 398px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* ==========================================================================

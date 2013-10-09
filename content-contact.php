@@ -19,11 +19,15 @@
 		<div id="contactForm">
 			<form action="<?php bloginfo('template_directory'); ?>/contact-mail.php" method="post">
 				<fieldset>
-					<input type="text" placeholder="Nom" name="nom" id="nom"/><input type="email" placeholder="Email" name="email" id="email"/><input type="tel" placeholder="Tél" name="tel" id="tel"/><input type="text" placeholder="Sujet" name="sujet" id="sujet"/>
-					<textarea placeholder="Message" name="message" id="message"></textarea>
+					<div class="inputContainer"><input type="text" placeholder="Nom" name="nom" id="nom"/><span class="errorText">Ce champs doit être rempli</span></div>
+					<div class="inputContainer email"><input type="email" placeholder="Email" name="email" id="email"/><span class="errorText">Ce champs doit contenir une email</span></div>
+					<div class="inputContainer"><input type="tel" placeholder="Tél" name="tel" id="tel"/><span class="errorText">Ce champs doit contenir un numéro</span></div>
+					<div class="inputContainer sujet"><input type="text" placeholder="Sujet" name="sujet" id="sujet"/><span class="errorText">Ce champs doit être rempli</span></div>
+					<div class="textareaContainer"><textarea placeholder="Message" name="message" id="message"></textarea><span class="errorText">Ce champs doit être rempli</span></div>
 					<div>
 						<button type="submit">envoyer</button>
 					</div>
+					<span class="formIsSend">Votre message a bien été envoyé&nbsp;!</span>
 				</fieldset>
 			</form>
 		</div>

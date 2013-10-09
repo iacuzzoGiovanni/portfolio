@@ -13,7 +13,6 @@
 			information,
 			oldRow = $("#infosWrapper").attr("class");
 		
-		console.log(oldRow);
 		$.ajax({
             url: php_array.admin_ajax,
             type: "POST",
@@ -65,7 +64,7 @@
     	for(var i = 0; i<information.technologies.length; i++){
     		$("#infosWrapper #littleTechnologies").append("<span>" + information.technologies[i].name + "</span>");
     	}
-		$("#infosWrapper p").text(information.description);
+		$("#infosWrapper p").html(information.description).text();
     	$("#infosWrapper #moreInfos a").attr("href", information.lien);
 	};
 
@@ -95,7 +94,10 @@
 				type:"post",
 				data: $contactForm.serialize(),
 				success:function(data){
-					console.log("votre email à bien été envoyé");
+					$(".formIsSend").css("opacity","0");
+					$(".formIsSend").css("display","block");
+					$(".formIsSend").animate({opacity: 1}, 500, function(){resetToZero()}).delay(1000).animate({opacity: 0}, 500, function(){$(this).css("display","none");});
+					
 				}
 			});
 		}
@@ -104,6 +106,8 @@
 	var checkIsNotEmpty = function(input){
 		if(!$.trim($("#"+input).val())){
 			$("#"+input).addClass("error");
+			$("#"+input).attr("placeholder",'');
+			$("#"+input).parent().find(".errorText").css("display","block");
 			return false;
 		}else{
 			return true;
@@ -115,6 +119,8 @@
 		
 		if(!reg.test($("#"+input).val())){
 			$("#"+input).addClass("error");
+			$("#"+input).attr("placeholder",'');
+			$("#"+input).parent().find(".errorText").css("display","block");
 			return false;
 		}else{
 			return true;
@@ -124,10 +130,38 @@
 	var checkIsNumberOk = function(input){
 		if(!$.isNumeric($("#"+input).val())){
 			$("#"+input).addClass("error");
+			$("#"+input).attr("placeholder",'');
+			$("#"+input).parent().find(".errorText").css("display","block");
 			return false;
 		}else{
 			return true;
 		}
+	};
+
+	var resetInput = function(e){
+		$(this).parent().find(".errorText").css("display","none");
+	};
+
+	var resetInput2 = function(e){
+		$(this).css("display","none");
+		$(this).parent().find("input").focus();
+	};
+
+	var resetToZero = function(){
+		$("input").val("").removeClass("error");
+		$("#nom").attr("placeholder","Nom");
+		$("#email").attr("placeholder","Email");
+		$("#tel").attr("placeholder","Tél");
+		$("#sujet").attr("placeholder","Sujet");
+		$("#message").val("").attr("placeholder","Message").removeClass("error");
+	};
+
+	var smoothScroll = function(e){
+		var the_id = $(this).attr("href"); 
+		$('html, body').animate({  
+			scrollTop:$(the_id).offset().top  
+		}, 'slow');  
+		e.preventDefault();
 	};
 
 	//Onload routine
@@ -135,6 +169,9 @@
 		$("body").on("click", "#realisations article",displayInfos);
 		$("body").on("click", ".icon-cancel", cancelInfos);
 		$("#contactForm").on("submit", "form", sendForm);
+		$("#contactForm").on("focus", ".error", resetInput);
+		$("#contactForm").on("click", ".errorText", resetInput2);
+		$("#menu-portfolio").on("click", "a", smoothScroll);
 	});
 
 }( jQuery ) );
