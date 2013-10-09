@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?php bloginfo( 'name' ); ?></title>
         <meta name="description" content="<?php bloginfo( 'description' ); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -32,7 +32,7 @@
                     </div>
                     <div id="headerDesc">
                         <p>Je suis un web designer liègeois qui conçois et développe des sites web et mobile aussi <strong>simples</strong> d’utilisation que <strong>beaux</strong>.</p>
-                        <a href="#contact">Engagez-moi</a>
+                        <a href="mailto:iacuzzogiovanni@gmail.com">Engagez-moi</a>
                     </div>
                     <div class="clear"></div>
                 </div>

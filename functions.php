@@ -34,6 +34,9 @@ function portfolio_script_styles(){
 	wp_register_script('plugin-js', get_template_directory_uri() . '/js/plugins.js', array('jquery'), false, true);
 	wp_enqueue_script('plugin-js');
 
+	wp_register_script('modern-js', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', array('jquery'), false, false);
+	wp_enqueue_script('modern-js');
+
 	wp_register_script('main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), false, true);
 
 		//Localize Scripts
