@@ -98,6 +98,11 @@ textarea {
 
 body{
 	font: 16px/1.5 'Open Sans', sans-serif;
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    -ms-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
 }
 
 a{
@@ -400,7 +405,7 @@ article:hover .infos{
 
 #apropos{
     background-color: #eee;
-    padding: 100px;
+    padding-top: 100px;
     padding-bottom: 150px;
 }
 
@@ -751,6 +756,23 @@ fieldset div{
     left: 0;
 }
 
+
+/* responsive element */
+#mobileContact{
+    display: none;
+}
+
+#mobileContact a{
+    color: #E74C3C;
+    text-decoration: none;
+    font-size: 80px;
+    margin: 0 20px;
+}
+
+#mobileContact span{
+    display: none;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -858,16 +880,95 @@ fieldset div{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 1024px){
+    .container{
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    #contactForm, #contactInfos{
+        display: none;
+    }
+
+    #mobileContact{
+        display: block;
+        text-align: center;
+    }
+
+    .center{
+        margin: 0;
+    }
+
+    .skill{
+        width: 47%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .skill:nth-child(even){
+        margin-right: 6%;
+    }
+
+    #headerImg{
+        width: 37%;
+    }
+
+    #headerImg img{
+        width: 100%;
+    }
+
+    header h1{
+        position: static;
+        text-align: center;
+    }
+
+    #menu-portfolio{
+        position: static;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .menu-item{
+        float: none;
+        display: inline-block;
+        margin: 0 20px;
+        font-size: 18px;
+    }
+
+    #infosContainer{
+        padding-top: 20px;
+    }
+
+    header{
+        height: 400px;
+    }
+
+    #headerDesc{
+        width: 60%;
+    }
+
+    #headerDesc a{
+        /*display: none;*/
+        margin-top: 20px;
+    }
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+}  
+
+@media only screen and (max-width: 767px){
+
+} 
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+
+} 
+
+@media only screen and (max-width: 480px){
+
+} 
 
 /* ==========================================================================
    Print styles.

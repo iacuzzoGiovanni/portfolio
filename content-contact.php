@@ -31,6 +31,12 @@
 				</fieldset>
 			</form>
 		</div>
+		<div id="mobileContact">
+			<a href="https://www.facebook.com/GioGio8" title="ajoutez-moi sur facebook" class="icon-facebook-circled"><span>facebook</span></a>
+			<a href="https://twitter.com/IacuzzoG" title="suivez-moi sur twitter" class="icon-twitter-circled"><span>twitter</span></a>
+			<a href="http://www.linkedin.com/pub/giovanni-iacuzzo/59/639/151" title="ajoutez-moi sur linkedin" class="icon-linkedin-circled"><span>facebook</span></a>
+			<a href="mailto:iacuzzogiovanni@gmail.com" title="envoyez-moi un mail" class="icon-mail-circled"><span>mail</span></a>
+		</div>
 	</div>
 	<div class="clear"></div>
 </section>

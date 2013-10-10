@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?php bloginfo( 'name' ); ?></title>
         <meta name="description" content="<?php bloginfo( 'description' ); ?>">
-        <meta name="viewport" content="initial-scale=1">
+        <meta name="viewport" content="initial-scale=1, width=device-width">    
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
