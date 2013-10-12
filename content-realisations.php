@@ -10,6 +10,29 @@
 		$i = 0;
 		$r = 0;
 	?>
+		<div id="mobileRea">
+			<div class="container">
+				<?php if ( $the_query->have_posts() ): ?>
+			
+					<?php while ( $the_query->have_posts() ): ?>
+						
+						<?php $the_query->the_post(); ?>
+						
+						<article>
+							<?php $image = wp_get_attachment_image_src(get_field('image'), 'thumbnail'); ?>
+							<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('image')) ?>">
+							<div class="alreadyInfos">
+								<h1><?php the_title(); ?></h1>
+								<span><?php echo get_field('technologies') ?></span>
+								<a href="<?php echo get_field('link') ?>" title="voir le travail" target="_blank">voir le site</a>
+							</div>
+						</article>
+
+					<?php endwhile; ?>
+			
+				<?php endif; ?>
+			</div>
+		</div>
 
 		<?php if ( $the_query->have_posts() ): ?>
 			
@@ -18,7 +41,7 @@
 				<?php $the_query->the_post(); ?>
 				
 					<?php if($i === 0): ?>
-						<div class="container" data-row="<?php echo $r; ?>">
+						<div class="container full" data-row="<?php echo $r; ?>">
 					<?php endif; ?>
 
 							<?php if($i === 1){$center = 1;}else{$center = 0;} ?>
@@ -45,6 +68,5 @@
 			<?php endwhile; ?>
 			
 		<?php endif; ?>
-
 	<div class="clear"></div>
 </section>

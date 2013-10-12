@@ -164,14 +164,24 @@
 		e.preventDefault();
 	};
 
+	var displayLink = function(e){
+		$(this).find(".alreadyInfos").addClass("clickedInfos");
+		setTimeout(unDisplayLink, 5000);
+	};
+
+	var unDisplayLink = function(){
+		$(".alreadyInfos").removeClass("clickedInfos");
+	};
+
 	//Onload routine
 	$(function(){
-		$("body").on("click", "#realisations article",displayInfos);
+		$("body").on("click", ".full article",displayInfos);
 		$("body").on("click", ".icon-cancel", cancelInfos);
 		$("#contactForm").on("submit", "form", sendForm);
 		$("#contactForm").on("focus", ".error", resetInput);
 		$("#contactForm").on("click", ".errorText", resetInput2);
 		$("#menu-portfolio").on("click", "a", smoothScroll);
+		$("#mobileRea").on("click", "article", displayLink);
 	});
 
 }( jQuery ) );

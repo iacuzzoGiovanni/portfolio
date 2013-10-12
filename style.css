@@ -267,7 +267,7 @@ article img{
     transition: all ease-in-out .2s;
 }
 
-article:hover img{
+.full article:hover img{
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
@@ -381,7 +381,7 @@ article:hover .infos{
     margin-top: 2em;
 }
 
-#moreInfos a{
+#moreInfos a, #mobileRea a{
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -773,6 +773,71 @@ fieldset div{
     display: none;
 }
 
+#mobileRea{
+    display: none;
+    text-align: center;
+}
+
+#mobileRea article{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    float: none;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.alreadyInfos{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(21,33,38, .9);
+    width: 100%;
+    text-align: center;
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    -ms-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    -webkit-transform: translate3d(0,90px,0);
+    -moz-transform: translate3d(0,90px,0);
+    -o-transform: translate3d(0,90px,0);
+    -ms-transform: translate3d(0,90px,0);
+    transform: translate3d(0,90px,0);
+}
+
+.clickedInfos{
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+.alreadyInfos a{
+    margin-bottom: 25px;
+}
+
+.alreadyInfos h1{
+    padding-top: 15px;
+    margin-bottom: 0 !important;
+    font-size: 16px !important;
+    opacity: 1 !important;
+    color: rgba(255,255,255, .8) !important;
+}
+
+.alreadyInfos span{
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #aaa;
+    font-size: 14px;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -896,10 +961,6 @@ fieldset div{
         text-align: center;
     }
 
-    .center{
-        margin: 0;
-    }
-
     .skill{
         width: 47%;
         margin: 0;
@@ -954,20 +1015,82 @@ fieldset div{
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 769px) and (max-width: 1024px){
 
 }  
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 768px){
+    #headerImg{
+        display: none;
+    }
 
+    #headerDesc{
+        width: 75%;
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+    }
+
+    .full{
+        display: none;
+    }
+
+    #realisations{
+        overflow: hidden;
+        padding-top: 50px;
+    }
+
+    #mobileRea{
+        display: block;
+    }
 } 
 
 @media only screen and (min-width: 480px) and (max-width: 767px){
-
+    
 } 
 
 @media only screen and (max-width: 480px){
+    #headerDesc{
+        width: 100%;
+    }
 
+    header{
+        height: 470px;
+    }
+
+    .container{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    #mobileRea article{
+        width: 100%;
+        height: auto !important;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    #mobileRea article img{
+        width: 100%;
+        height: auto !important;
+    }
+
+    #apropos p {
+        font-size: 16px;
+    }
+
+    #apropos{
+        padding: 50px 0;
+    }
+
+    .skill h2{
+        font-size: 12px;
+    }
+
+    #mobileContact a{
+        font-size: 50px;
+        margin: 0 5px;
+    }
 } 
 
 /* ==========================================================================
