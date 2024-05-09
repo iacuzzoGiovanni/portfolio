@@ -1,6 +1,6 @@
 <section class="max-w-xl mx-auto selected-work py-8">
-    <h3 class="text-2xl text-center mb-2 tracking-tight">Selected work</h3>
-    <p class="text-base text-center text-stone-600 tracking-tight">I wish I could share real work, NDAs prevent it. <br> Here are concepts showcasing my craft instead.</p>
+    <h3 class="text-xl md:text-2xl text-center mb-2 tracking-tight">Selected work</h3>
+    <p class="text-sm md:text-base text-center text-stone-600 tracking-tight">I wish I could share real work, NDAs prevent it. <br> Here are concepts showcasing my craft instead.</p>
 </section>
 
 <div class="mb-8">
@@ -40,5 +40,17 @@
 
     img{
         border-radius: 16px;
+    }
+
+    @media screen and (max-width: 1280px){
+        ul{
+            width: calc(100vw/2*8);
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        ul{
+            width: calc((100vw)*8);
+        }
     }
 </style>
