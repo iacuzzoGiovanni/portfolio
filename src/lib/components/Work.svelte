@@ -5,14 +5,14 @@
 
 <div class="mb-8">
     <ul>
-        <li><img src="./profile.png" alt=""></li>
-        <li><img src="./Smart_home.png" alt=""></li>
-        <li><img src="./crypto.png" alt=""></li>
-        <li><img src="./appicon.png" alt=""></li>
-        <li><img src="./profile.png" alt=""></li>
-        <li><img src="./Smart_home.png" alt=""></li>
-        <li><img src="./crypto.png" alt=""></li>
-        <li><img src="./appicon.png" alt=""></li>
+        <li><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+        <li><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+        <li><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+        <li><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+        <li><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+        <li><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+        <li><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+        <li><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
     </ul>
 </div>
 
