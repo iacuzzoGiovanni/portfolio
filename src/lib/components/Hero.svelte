@@ -8,6 +8,6 @@
 </header>
 <section class="max-w-xl mx-auto tagline flex flex-col items-center pb-8">
     <h2 class="md:text-5xl text-3xl text-center mb-4 tracking-tighter font-regular leading-big-title">I help businesses create beautiful and <span class="text-nowrap">easy-to-use</span> digital products <span class="text-violet-500">ツ</span></h2>
-    <p class="text-sm md:text-base text-center mb-8 px-10 tracking-tight text-stone-600">Over a decade of experience designing websites, <span class="text-nowrap">mobile apps</span>, <span class="text-nowrap">software interface</span>, icons and more</p>
+    <p class="text-base text-center mb-8 px-10 tracking-tight text-stone-600">Over a decade of experience designing websites, <span class="text-nowrap">mobile apps</span>, <span class="text-nowrap">software interface</span>, icons and more</p>
     <Button>Get in touch</Button>
 </section>
