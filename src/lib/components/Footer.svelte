@@ -1,7 +1,7 @@
 <script>
     import Button from "./Button.svelte";
 </script>
-<footer class="max-w-screen-sm mx-auto selected-work pt-8 px-4">
+<footer class="max-w-screen-sm mx-auto selected-work pt-8">
     <h3 class="text-3xl text-center mb-2 tracking-tight mb-8">Made with ❤️</h3>
     <div class="mb-8 text-center sm:flex sm:justify-center">
         <Button>Get in touch</Button>
@@ -15,7 +15,7 @@
 </footer>
 <style>
     p{
-        font-size: calc(4px + 10.25vw);
+        font-size: calc(4px + 11.5vw);
     }
 
     p span{
