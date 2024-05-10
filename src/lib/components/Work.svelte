@@ -1,6 +1,6 @@
-<section class="max-w-xl mx-auto selected-work py-8">
-    <h3 class="text-2xl text-center mb-2 tracking-tight">Selected work</h3>
-    <p class="text-base text-center text-stone-600 tracking-tight">I wish I could share real work, NDAs prevent it. <br> Here are concepts showcasing my craft instead.</p>
+<section class="max-w-xl mx-auto selected-work py-8 px-4">
+    <h3 class="text-3xl text-center mb-2 tracking-tight">Selected work</h3>
+    <p class="text-lg text-center text-stone-600 tracking-tight">I wish I could share real work, NDAs prevent it. Here are concepts showcasing my craft instead.</p>
 </section>
 
 <div class="mb-8">

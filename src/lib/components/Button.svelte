@@ -6,9 +6,9 @@
                ease-in-out 
                text-stone-100 
                hover:text-stone-50 
-               text-sm 
+               text-base
                font-medium 
-               h-11 px-6 
+               h-12 px-6 
                rounded-full 
                border 
                border-stone-900 
@@ -17,7 +17,7 @@
 </button>
 <style>
     button{
-        box-shadow: 0px 1px 0px 0px theme('colors.stone.600') inset,
+        box-shadow: 0px 1px 0px 0px theme('colors.stone.500') inset,
                     0px 2px 4px 0px theme('colors.stone.300');
     }
 </style>

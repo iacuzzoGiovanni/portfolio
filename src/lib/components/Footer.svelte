@@ -1,8 +1,8 @@
 <script>
     import Button from "./Button.svelte";
 </script>
-<footer class="max-w-xl mx-auto selected-work pt-8">
-    <h3 class="text-2xl text-center mb-2 tracking-tight mb-8">Made with ❤️</h3>
+<footer class="max-w-xl mx-auto selected-work pt-8 px-4">
+    <h3 class="text-3xl text-center mb-2 tracking-tight mb-8">Made with ❤️</h3>
     <div class="flex justify-center mb-8">
         <ul class="flex-col md:flex-row flex gap-y-8 md:gap-x-8 justify-center items-center">
             <li><Button>Get in touch</Button></li>
