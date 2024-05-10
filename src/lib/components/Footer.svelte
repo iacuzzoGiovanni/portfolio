@@ -11,5 +11,20 @@
             <li><a href="https://linkedin.com/in/giovanni-iacuzzo-15163959" target="_blank" class="text-base underline underline-offset-4 font-regular hover:text-stone-700">Linkedin</a></li>
         </ul>
     </div>
-    <p class="text-center text-[2.75rem] sm:text-7xl tracking-tighter overflow-hidden"><span class="relative top-6">Giovanni Iacuzzo</span></p>
+    <p class="text-center tracking-tighter overflow-hidden"><span class="relative sm:top-11">Giovanni Iacuzzo</span></p>
 </footer>
+<style>
+    p{
+        font-size: calc(4px + 10.25vw);
+    }
+
+    p span{
+        top: 0.55em;
+    }
+    
+    @media (min-width: 640px){
+        p{
+            font-size: 79px;
+        }
+    }
+</style>
