@@ -1,90 +1,44 @@
-<ul>
-    <li><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-    <li><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-    <li><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-    <li><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-    <li><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-    <li><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-    <li><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-    <li><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-    <li><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-</ul>
-<button on:click={prev}>prev</button>
-<button on:click={next}>next</button>
+<div class="glide">
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            <li class="glide__slide"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+            <li class="glide__slide"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+            <li class="glide__slide"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+            <li class="glide__slide"><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+            <li class="glide__slide"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+            <li class="glide__slide"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+            <li class="glide__slide"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+            <li class="glide__slide"><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+            <li class="glide__slide"><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+        </ul>
+    </div>
+</div>
 <style>
-    ul{
-        width: 100%;
-        overflow: clip;
-        overflow-x: scroll;
-        font-size: 0;
-        text-wrap: nowrap;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
+    .glide__slide{
+        transition: transform .2s ease-in-out;
     }
-
-    li{
-        display: inline-block;
-        width: calc((100% - 32px)/3);
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-        margin-right: 16px;
-        /*transition: transform .1s ease-in-out;*/
+    .glide__slide:not(.glide__slide--active){
+        transform: scale(.8);
     }
-
-    li:not(.selected){
-        transform: scale(0.9);
-    }
-
-    li:last-child{
-        margin-right: 0;
+    img{
+        border-radius: 32px;
+        width: auto;
+        height: 640px;
+        object-fit: cover;
     }
 </style>
 <script>
     import { onMount } from "svelte";
-
-    let slider;
-    let sliderWidth;
-    let sliderItems;
-    let sliderContainerWidth;
-    let sliderItemWidth;
-    let scrollPosition = 0;
-    let selectedItem;
+    import Glide from '@glidejs/glide';
+    import "@glidejs/glide/dist/css/glide.core.min.css";
 
     onMount(() => {
-        slider = document.querySelector('ul');
-        sliderItems = slider.querySelectorAll('li');
-        sliderWidth = slider.scrollWidth;
-        sliderContainerWidth = slider.clientWidth;
-        sliderItemWidth = slider.querySelector('li').offsetWidth;
-        selectedItem = 1;
-        sliderItems[selectedItem].classList.add('selected');
+        new Glide('.glide', {
+            type: 'carousel',
+            perView: 4,
+            gap: 16,
+            focusAt: 'center',
+            animationDuration: 200
+        }).mount();
     });
-
-    function setSelected(el){
-        sliderItems[selectedItem].classList.remove('selected');
-        selectedItem = selectedItem + Number(el);
-        sliderItems[selectedItem].classList.add('selected');
-    }
-
-    // Function to scroll to a specific position
-    function scrollToPosition(position) {
-        slider.scrollLeft = position;
-        scrollPosition = position;
-    }
-
-    // Event listener for previous button
-    function prev() {
-        if (scrollPosition > 0) {
-            scrollToPosition(scrollPosition - sliderItemWidth);
-            setSelected('-1');
-        }
-    };
-
-    // Event listener for next button
-    function next() {
-        if (scrollPosition < sliderWidth - sliderContainerWidth) {
-            scrollToPosition(scrollPosition + sliderItemWidth);
-            setSelected('+1');
-        }
-    };
 </script>
