@@ -4,53 +4,55 @@
 </section>
 
 <div class="mb-8">
-    <ul>
-        <li><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-        <li><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-        <li><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-        <li><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-        <li><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-        <li><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-        <li><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-        <li><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-    </ul>
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide"><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+            </ul>
+        </div>
+        <div data-glide-el="controls" class="flex justify-center gap-x-4 mt-8">
+            <button data-glide-dir="<" class="size-11 border border-zinc-300 hover:border-zinc-400 hover:bg-zinc-100 transition-colors duration-200 ease-in-out rounded-full active:scale-90 text-zinc-900 inline-flex justify-center items-center"><ChevronLeft /></button>
+            <button data-glide-dir=">" class="size-11 border border-zinc-300 hover:border-zinc-400 hover:bg-zinc-100 transition-colors duration-200 ease-in-out rounded-full active:scale-90 text-zinc-900 inline-flex justify-center items-center"><ChevronRight /></button>
+        </div>
+    </div>
 </div>
 
 <style>
-    @keyframes carousel {
-        0% { transform: translate3d(0,0,0); }
-        100% { transform: translate3d(-50%,0,0);}
+    .glide__slide{
+        transition: transform .2s ease-in-out;
     }
-
-    div{
-        overflow:hidden;
-	    position: relative;
-	    width: 100%;
+    .glide__slide:not(.glide__slide--active){
+        transform: scale(.8);
     }
-
-    ul{
-        display: inline-flex;
-        width: calc(100vw/3*8);
-        animation: carousel 40s linear infinite;
-    }    
-
-    li{
-        margin-left: 16px;
-    }
-
     img{
-        border-radius: 16px;
-    }
-
-    @media screen and (max-width: 1280px){
-        ul{
-            width: calc(100vw/2*8);
-        }
-    }
-
-    @media screen and (max-width: 768px){
-        ul{
-            width: calc((100vw)*8);
-        }
+        border-radius: 32px;
+        width: auto;
+        object-fit: cover;
     }
 </style>
+
+<script>
+    import { onMount } from "svelte";
+    import Glide from '@glidejs/glide';
+    import "@glidejs/glide/dist/css/glide.core.min.css";
+    import { ChevronRight, ChevronLeft } from 'lucide-svelte';
+    
+
+    onMount(() => {
+        new Glide('.glide', {
+            type: 'slider',
+            rewind: false,
+            perView: 2,
+            gap: 8,
+            focusAt: 'center',
+            startAt: 1,
+            animationDuration: 200
+        }).mount();
+    });
+</script>
