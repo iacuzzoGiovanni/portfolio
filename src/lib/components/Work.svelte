@@ -49,6 +49,12 @@
             type: 'slider',
             rewind: false,
             perView: 2,
+            breakpoints:{
+                640: {
+                    perView: 1,
+                    gap: 32
+                }
+            },
             gap: 8,
             focusAt: 'center',
             startAt: 1,
