@@ -1,19 +1,20 @@
 <section class="max-w-screen-sm mx-auto selected-work py-8 px-4">
     <h3 class="text-3xl text-center mb-2 tracking-tight">Selected work</h3>
-    <p class="text-lg text-center text-stone-600 tracking-tight text-balance">I wish I could share real work, NDAs prevent it. Here are concepts showcasing my craft instead.</p>
+    <p class="text-lg text-center text-stone-600 tracking-tight text-balance">
+        Dive into a mix of concepts and real-world projects that highlight my creative flair and expertise.
+    </p>
 </section>
 
 <div class="mb-8">
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-                <li class="glide__slide px-4 lg:px-0"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/404.png" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/profile.png" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/Messaging.png" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/timer.png" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/Music-player.png" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/subscribe.png" alt="" loading="lazy" width="2048" height="1536"></li>
             </ul>
         </div>
         <div data-glide-el="controls" class="flex justify-center gap-x-4 mt-8">
@@ -41,8 +42,7 @@
     import { onMount } from "svelte";
     import Glide from '@glidejs/glide';
     import "@glidejs/glide/dist/css/glide.core.min.css";
-    import { ChevronRight, ChevronLeft } from 'lucide-svelte';
-    
+    import { ChevronRight, ChevronLeft } from 'lucide-svelte';   
 
     onMount(() => {
         new Glide('.glide', {

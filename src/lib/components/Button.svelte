@@ -1,5 +1,7 @@
-<button class="primary-btn 
+<a href={link} class="primary-btn 
                bg-stone-900 
+               inline-flex
+               items-center
                hover:bg-stone-700 
                transition-colors 
                duration-200 
@@ -14,10 +16,13 @@
                border-stone-900 
                hover:border-stone-700">
     <slot />
-</button>
+</a>
 <style>
-    button{
+    a{
         box-shadow: 0px 1px 0px 0px theme('colors.stone.500') inset,
                     0px 2px 4px 0px theme('colors.stone.300');
     }
 </style>
+<script>
+    export let link;
+</script>
