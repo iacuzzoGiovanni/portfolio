@@ -7,13 +7,13 @@
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-                <li class="glide__slide"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide"><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./appicon.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./Smart_home.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./crypto.webp" alt="" loading="lazy" width="2048" height="1536"></li>
             </ul>
         </div>
         <div data-glide-el="controls" class="flex justify-center gap-x-4 mt-8">
@@ -50,7 +50,7 @@
             rewind: false,
             perView: 2,
             breakpoints:{
-                640: {
+                1024: {
                     perView: 1,
                     gap: 32
                 }
