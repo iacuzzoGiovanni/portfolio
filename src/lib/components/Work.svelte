@@ -9,12 +9,12 @@
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/404.png" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/profile.png" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/Messaging.png" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/timer.png" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/Music-player.png" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/subscribe.png" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/404.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/Messaging.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/timer.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/Music-player.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/subscribe.webp" alt="" loading="lazy" width="2048" height="1536"></li>
             </ul>
         </div>
         <div data-glide-el="controls" class="flex justify-center gap-x-4 mt-8">
