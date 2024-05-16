@@ -9,30 +9,31 @@
   <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <!-- Person Schema -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Giovanni Iacuzzo",
-      "jobTitle": "Product Designer",
-      "url": "https://www.iacuzzogiovanni.com",
-      "image": "https://www.iacuzzogiovanni.com/avatar.jpg",
-      "sameAs": [
-        "https://twitter.com/IacuzzoG",
-        "https://dribbble.com/iacuzzogiovanni",
-        "https://linkedin.com/in/giovanni-iacuzzo-15163959"
-      ]
-    }
-    </script>
-    <!-- SiteNavigationElement Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://www.iacuzzogiovanni.com",
-      "name": "Giovanni Iacuzzo | Product Designer helping businesses create user-friendly digital products"
-    }
-    </script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Giovanni Iacuzzo",
+    "jobTitle": "Product Designer",
+    "url": "https://www.iacuzzogiovanni.com",
+    "image": "https://www.iacuzzogiovanni.com/avatar.jpg",
+    "sameAs": [
+      "https://twitter.com/IacuzzoG",
+      "https://dribbble.com/iacuzzogiovanni",
+      "https://linkedin.com/in/giovanni-iacuzzo-15163959"
+    ]
+  }
+  </script>
+  <!-- SiteNavigationElement Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.iacuzzogiovanni.com",
+    "name": "Giovanni Iacuzzo | Product Designer helping businesses create user-friendly digital products."
+  }
+  </script>
 </svelte:head>
 
 <script>
