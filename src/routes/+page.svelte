@@ -34,6 +34,23 @@
   <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://iacuzzogiovanni.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Giovanni Iacuzzo | UI/UX / Product Designer">
+<meta property="og:description" content="Product Designer with 10+ years of experience in websites, mobile apps, software interfaces, and icons. Creating user-friendly digital products.">
+<meta property="og:image" content="./cover.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="iacuzzogiovanni.com">
+<meta property="twitter:url" content="https://iacuzzogiovanni.com">
+<meta name="twitter:title" content="Giovanni Iacuzzo | UI/UX / Product Designer">
+<meta name="twitter:description" content="Product Designer with 10+ years of experience in websites, mobile apps, software interfaces, and icons. Creating user-friendly digital products.">
+<meta name="twitter:image" content="./cover.png">
+
 </svelte:head>
 
 <script>
