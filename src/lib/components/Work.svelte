@@ -9,12 +9,12 @@
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/404.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/profile.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/Messaging.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/timer.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/Music-player.webp" alt="" loading="lazy" width="2048" height="1536"></li>
-                <li class="glide__slide px-4 lg:px-0"><img src="./work/subscribe.webp" alt="" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/404.webp" alt="404 error page concept" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/profile.webp" alt="Profile page for a mobile app on a social network" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/Messaging.webp" alt="Message feature design for a music platform" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/timer.webp" alt="Concept of a web timer" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/Music-player.webp" alt="Music player widget design for a music platform" loading="lazy" width="2048" height="1536"></li>
+                <li class="glide__slide px-4 lg:px-0"><img src="./work/subscribe.webp" alt="Successful message for a subscription with a button" loading="lazy" width="2048" height="1536"></li>
             </ul>
         </div>
         <div data-glide-el="controls" class="flex justify-center gap-x-4 mt-8">

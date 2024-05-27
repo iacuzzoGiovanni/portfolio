@@ -1,6 +1,6 @@
 <svelte:head>
-	<title>Giovanni Iacuzzo | Product Designer helping businesses create user-friendly digital products</title>
-	<meta name="description" content="Giovanni Iacuzzo, Product Designer with over a decade of experience in designing websites, mobile apps, software interfaces, icons, and more. Creating beautiful, user-friendly digital products." />
+	<title>Giovanni Iacuzzo | UI/UX / Product Designer</title>
+	<meta name="description" content="Product Designer with 10+ years of experience in websites, mobile apps, software interfaces, and icons. Creating user-friendly digital products." />
   <!-- Person Schema -->
   <script type="application/ld+json">
   {
@@ -23,7 +23,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "url": "https://www.iacuzzogiovanni.com",
-    "name": "Giovanni Iacuzzo | Product Designer helping businesses create user-friendly digital products."
+    "name": "Giovanni Iacuzzo | UI/UX / Product Designer"
   }
   </script>
   <meta name="keywords" content="Product Designer, UX/UI Designer, Digital Product Design, Web Design, Mobile App Design, Software Interface Design, Icon Design, User-Friendly Design, Digital Products, Giovanni Iacuzzo, Experienced Designer, Design Portfolio, Freelance Designer, Visual Designer, Creative Designer">
